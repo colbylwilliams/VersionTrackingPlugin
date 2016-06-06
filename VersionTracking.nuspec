@@ -6,11 +6,9 @@
 		<title>VersionTracking Plugin for Xamarin and Windows</title>
 		<authors>Colby Williams</authors>
 		<owners>Colby Williams</owners>
-		<licenseUrl/>
-		<projectUrl/>
-		<!--Default Icon, a template can be found:  https://raw.githubusercontent.com/jamesmontemagno/Xamarin-Templates/master/Plugins-Templates/icons/plugin_icon.png-->  
+		<licenseUrl>https://github.com/colbylwilliams/VersionTrackingPlugin/blob/master/LICENSE.md</licenseUrl>
+		<projectUrl>https://github.com/colbylwilliams/VersionTrackingPlugin</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/jamesmontemagno/Xamarin-Templates/master/Plugins-Templates/icons/plugin_icon_nuget.png</iconUrl>
-
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
          Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.
@@ -47,8 +45,8 @@
 		<file src="VersionTracking\Plugin.VersionTracking\bin\Release\Plugin.VersionTracking.pdb" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.VersionTracking.pdb" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.dll" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.VersionTracking.Abstractions.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.xml" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.VersionTracking.Abstractions.xml" />
-		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.pdb" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.VersionTracking.Abstractions.pdb" />		
-		
+		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.pdb" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.VersionTracking.Abstractions.pdb" />
+
 		<!--dotnet-->
 		<file src="VersionTracking\Plugin.VersionTracking\bin\Release\Plugin.VersionTracking.dll" target="lib\dotnet\Plugin.VersionTracking.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking\bin\Release\Plugin.VersionTracking.xml" target="lib\dotnet\Plugin.VersionTracking.xml" />
@@ -56,7 +54,7 @@
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.dll" target="lib\dotnet\Plugin.VersionTracking.Abstractions.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.xml" target="lib\dotnet\Plugin.VersionTracking.Abstractions.xml" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.pdb" target="lib\dotnet\Plugin.VersionTracking.Abstractions.pdb" />
-		
+
 		<!--Win Phone Silverlight-->
 		<file src="VersionTracking\Plugin.VersionTracking.WindowsPhone8\bin\Release\Plugin.VersionTracking.dll" target="lib\wp8\Plugin.VersionTracking.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking.WindowsPhone8\bin\Release\Plugin.VersionTracking.xml" target="lib\wp8\Plugin.VersionTracking.xml" />
@@ -64,7 +62,7 @@
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.dll" target="lib\wp8\Plugin.VersionTracking.Abstractions.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.xml" target="lib\wp8\Plugin.VersionTracking.Abstractions.xml" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.pdb" target="lib\wp8\Plugin.VersionTracking.Abstractions.pdb" />
-		
+
 		<!--Win Phone 81-->
 		<file src="VersionTracking\Plugin.VersionTracking.WindowsPhone81\bin\Release\Plugin.VersionTracking.dll" target="lib\wpa81\Plugin.VersionTracking.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking.WindowsPhone81\bin\Release\Plugin.VersionTracking.xml" target="lib\wpa81\Plugin.VersionTracking.xml" />
@@ -72,7 +70,7 @@
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.dll" target="lib\wpa81\Plugin.VersionTracking.Abstractions.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.xml" target="lib\wpa81\Plugin.VersionTracking.Abstractions.xml" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.pdb" target="lib\wpa81\Plugin.VersionTracking.Abstractions.pdb" />
-		
+
 		<!--WinStore-->
 		<file src="VersionTracking\Plugin.VersionTracking.WindowsStore\bin\Release\Plugin.VersionTracking.dll" target="lib\win8\Plugin.VersionTracking.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking.WindowsStore\bin\Release\Plugin.VersionTracking.xml" target="lib\win8\Plugin.VersionTracking.xml" />
@@ -102,7 +100,7 @@
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.dll" target="lib\UAP10\Plugin.VersionTracking.Abstractions.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.xml" target="lib\UAP10\Plugin.VersionTracking.Abstractions.xml" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.pdb" target="lib\UAP10\Plugin.VersionTracking.Abstractions.pdb" />
-		
+
 		<!--Xamarin.Mac
 		<file src="VersionTracking\Plugin.VersionTracking.Mac\bin\iPhone\Release\Plugin.VersionTracking.dll" target="lib\Xamarin.Mac20\Plugin.VersionTracking.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking.Mac\bin\iPhone\Release\Plugin.VersionTracking.xml" target="lib\Xamarin.Mac20\Plugin.VersionTracking.xml" />
