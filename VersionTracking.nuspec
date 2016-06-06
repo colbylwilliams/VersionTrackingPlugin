@@ -4,8 +4,8 @@
 		<id>Plugin.VersionTracking</id>
 		<version>1.0.0</version>
 		<title>VersionTracking Plugin for Xamarin and Windows</title>
-		<authors>Your Name</authors>
-		<owners>Your Name</owners>
+		<authors>Colby Williams</authors>
+		<owners>Colby Williams</owners>
 		<licenseUrl/>
 		<projectUrl/>
 		<!--Default Icon, a template can be found:  https://raw.githubusercontent.com/jamesmontemagno/Xamarin-Templates/master/Plugins-Templates/icons/plugin_icon.png-->  
@@ -13,10 +13,10 @@
 
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-         Long description for your plugin.
+         Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.
 		</description>
-		<summary>Short description for your plugin.</summary>
-		<tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios</tags>
+		<summary>App Version Tracking Plugin for Xamarin and Windows</summary>
+		<tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios, mac, version</tags>
 		<dependencies>
 			<group targetFramework="net">
 			</group>

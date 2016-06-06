@@ -1,12 +1,12 @@
 ## VersionTracking
 
-Track which versions of your Xamarin.iOS, Xamarin.Mac, or Xamarin.Android a user has previously installed.
+Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.
 
 _Inspired by [GBVersionTracking](https://github.com/lmirosevic/GBVersionTracking)_
 
 
 ### Xamarin, Windows, and Xamarin.Forms
-This NuGet can be used for all tradition Xamarin and Windows development with or without Xamarin.Forms. There is no requirement of a dependency service as it has a built in Singleton to access the vibrate functionality.
+This NuGet can be used for classic Xamarin and Windows development with or without Xamarin.Forms. There is no requirement of a dependency service as it has a built in Singleton to access the functionality.
 
 ## Setup
 * Available on NuGet: (soon)
@@ -21,9 +21,9 @@ This NuGet can be used for all tradition Xamarin and Windows development with or
 |Xamarin.Android|Yes|API 10+|
 |Windows Phone Silverlight|Yes|8.0+|
 |Windows Phone RT|Yes|8.1+|
-|Windows Store RT|---|8.1+|
+|Windows Store RT|Yse|8.1+|
 |Windows 10 UWP|Yes|10+|
-|Xamarin.Mac|No||
+|Xamarin.Mac|Yes||
 
 
 ### API Usage
