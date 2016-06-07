@@ -37,19 +37,19 @@ Then call these whenever you want (in these examples the user has launched a bun
 ```C#
 var vt = CrossVersionTracking.Current;
 
-vt.IsFirstLaunchEver;        //Returns: False
-vt.IsFirstLaunchForVersion;  //Returns: True
-vt.IsFirstLaunchForBuild;    //Returns: True
+vt.IsFirstLaunchEver;        // false
+vt.IsFirstLaunchForVersion;  // true
+vt.IsFirstLaunchForBuild;    // true
 
-vt.CurrentVersion;           //Returns: 1.0.11
-vt.PreviousVersion;          //Returns: 1.0.10
-vt.FirstInstalledVersion;    //Returns: 1.0.0
-vt.VersionHistory;           //Returns: [ 1.0.0, 1.0.1, 1.0.2, 1.0.3, 1.0.10, 1.0.11 ]
+vt.CurrentVersion;           // 1.0.11
+vt.PreviousVersion;          // 1.0.10
+vt.FirstInstalledVersion;    // 1.0.0
+vt.VersionHistory;           // [ 1.0.0, 1.0.1, 1.0.2, 1.0.3, 1.0.10, 1.0.11 ]
 
-vt.CurrentBuild;             //Returns: 18
-vt.PreviousBuild;            //Returns: 15
-vt.FirstInstalledBuild;      //Returns: 1
-vt.BuildHistory;             //Returns: [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 13, 15, 18 ]
+vt.CurrentBuild;             // 18
+vt.PreviousBuild;            // 15
+vt.FirstInstalledBuild;      // 1
+vt.BuildHistory;             // [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 13, 15, 18 ]
  ```
 
 Or set up actions to be called on the first lauch of a specific version or build:
