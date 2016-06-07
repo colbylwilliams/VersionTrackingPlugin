@@ -5,7 +5,7 @@ Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windo
 ## Setup
 * Available on NuGet: https://www.nuget.org/packages/Plugin.VersionTracking/1.0.1
 * Install into your PCL project and Client projects.  
-_All fuctionality is exposed through a built-in Singleton, no dependency service required_
+_(fuctionality is exposed through a built-in Singleton, no dependency service required)_
 
 
 ##### Platform Support
