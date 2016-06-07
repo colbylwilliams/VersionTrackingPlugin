@@ -1,12 +1,13 @@
-## VersionTracking ![NuGet](https://img.shields.io/nuget/v/Plugin.VersionTracking.svg?label=NuGet)
+# Version Tracking Plugin for Xamarin and Windows 
 
 Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.
 
-_Inspired by [GBVersionTracking](https://github.com/lmirosevic/GBVersionTracking)_
+## Setup ![NuGet](https://img.shields.io/nuget/v/Plugin.VersionTracking.svg?label=NuGet)
+* Available on NuGet: https://www.nuget.org/packages/Plugin.VersionTracking/1.0.1
+* Install into your PCL project and Client projects.
 
 
-#### Xamarin, Windows, and Xamarin.Forms
-This NuGet can be used for classic Xamarin and Windows development with or without Xamarin.Forms. There is no requirement of a dependency service as it has a built in Singleton to access the functionality.
+**This plugin is compatible with Xamarin and Windows projects with or without Xamarin.Forms**. There is no requirement of a dependency service; a built-in Singleton exposes the functionality.
 
 **Platform Support**
 
@@ -20,11 +21,6 @@ This NuGet can be used for classic Xamarin and Windows development with or witho
 |Windows Store RT|Yse|8.1+|
 |Windows 10 UWP|Yes|10+|
 |Xamarin.Mac|Yes||
-
-
-## Setup
-* Available on NuGet: https://www.nuget.org/packages/Plugin.VersionTracking/1.0.1
-* Install into your PCL project and Client projects.
 
 
 ## API Usage
@@ -55,9 +51,19 @@ vt.FirstInstalledBuild;      //Returns: 1
 vt.BuildHistory;             //Returns: [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 13, 15, 18 ]
  ```
 
+Or set up actions to be called on the first lauch of a specific version or build:
 
-### Contributors
-* [colbylwilliams](https://github.com/colbylwilliams)
+```C#
+var vt = CrossVersionTracking.Current;
+
+vt.OnFirstLaunchOfBuild ("18", () => Console.WriteLine ("First time Build 18 launched!"));
+vt.OnFirstLaunchOfVersion ("1.0.11", () => Console.WriteLine ("First time Version 1.0.11 launched!"));
+```
+
+
+## Contributors
+* [Colby Williams](https://github.com/colbylwilliams)
+* _Originally inspired by [GBVersionTracking](https://github.com/lmirosevic/GBVersionTracking)_
 
 
 #### License
