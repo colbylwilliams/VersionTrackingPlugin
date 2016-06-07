@@ -1,16 +1,12 @@
-## VersionTracking
+## VersionTracking ![NuGet](https://img.shields.io/nuget/v/Plugin.VersionTracking.svg?label=NuGet)
 
 Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.
 
 _Inspired by [GBVersionTracking](https://github.com/lmirosevic/GBVersionTracking)_
 
 
-### Xamarin, Windows, and Xamarin.Forms
+#### Xamarin, Windows, and Xamarin.Forms
 This NuGet can be used for classic Xamarin and Windows development with or without Xamarin.Forms. There is no requirement of a dependency service as it has a built in Singleton to access the functionality.
-
-## Setup
-* Available on NuGet: (soon)
-* Install into your PCL project and Client projects.
 
 **Platform Support**
 
@@ -26,7 +22,12 @@ This NuGet can be used for classic Xamarin and Windows development with or witho
 |Xamarin.Mac|Yes||
 
 
-### API Usage
+## Setup
+* Available on NuGet: https://www.nuget.org/packages/Plugin.VersionTracking/1.0.1
+* Install into your PCL project and Client projects.
+
+
+## API Usage
 
 Call this on each app launch inside `DidFinishLaunching` (Xamarin.iOS), `FinishedLaunching` (Xamarin.Mac), or the MainActivity's `OnCreate` (Xamarin.Android)
 
@@ -55,10 +56,10 @@ vt.BuildHistory;             //Returns: [ 1, 2, 3, 4, 5, 8, 9, 10, 11, 13, 15, 1
  ```
 
 
-#### Contributors
+### Contributors
 * [colbylwilliams](https://github.com/colbylwilliams)
 
 
 #### License
 The MIT License (MIT)
-Copyright (c) 2016 Colby Williams
+Copyright © 2016 Colby Williams
