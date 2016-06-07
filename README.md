@@ -1,13 +1,12 @@
-## Version Tracking Plugin for Xamarin and Windows 
+## Version Tracking Plugin for Xamarin and Windows ![NuGet](https://img.shields.io/nuget/v/Plugin.VersionTracking.svg?label=NuGet)
 
-Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.
+Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.  
 
-## Setup ![NuGet](https://img.shields.io/nuget/v/Plugin.VersionTracking.svg?label=NuGet)
+## Setup
 * Available on NuGet: https://www.nuget.org/packages/Plugin.VersionTracking/1.0.1
-* Install into your PCL project and Client projects.
+* Install into your PCL project and Client projects.  
+_All fuctionality is exposed through a built-in Singleton, no dependency service required_
 
-##### Compatible with Xamarin and Windows projects with or without Xamarin.Forms
-There is no requirement of a dependency service; a built-in Singleton exposes the functionality.   
 
 ##### Platform Support
 
@@ -21,6 +20,8 @@ There is no requirement of a dependency service; a built-in Singleton exposes th
 |Windows Store RT|Yse|8.1+|
 |Windows 10 UWP|Yes|10+|
 |Xamarin.Mac|Yes||
+
+**_Supports both classic Xamarin.iOS / Xamarin.Android and Xamarin.Forms_**
 
 
 ## API Usage
