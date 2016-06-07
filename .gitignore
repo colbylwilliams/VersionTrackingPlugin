@@ -215,3 +215,4 @@ Thumbs.db
 #bitrise
 .bitrise*
 /.vs/config
+*.nupkg
