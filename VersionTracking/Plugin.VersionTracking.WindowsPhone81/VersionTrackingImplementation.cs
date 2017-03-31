@@ -172,13 +172,26 @@ namespace Plugin.VersionTracking
         public bool IsFirstLaunchForBuild => isFirstLaunchForBuild;
 
 
+        private Package CurrentPackage
+        {
+            get
+            {
+#if SILVERLIGHT
+                return Windows.Phone.Management.Deployment.InstallationManager.FindPackagesForCurrentPublisher().First();
+#else
+                return Package.Current;
+#endif
+            }
+        }
+
+
         /// <summary>
         /// Returns the current version of the app, as defined in the PList, e.g. "4.3".
         /// </summary>
         /// <value>The current version.</value>
         public string CurrentVersion {
             get {
-                var version = Package.Current.Id.Version;
+                var version = CurrentPackage.Id.Version;
 
                 return string.Format("{0}.{1}.{2}.{3}", version.Major, version.Minor, version.Build, version.Revision);
             }
@@ -189,7 +202,7 @@ namespace Plugin.VersionTracking
         /// Returns the current build of the app, as defined in the PList, e.g. "4300".
         /// </summary>
         /// <value>The current build.</value>
-        public string CurrentBuild => Package.Current.Id.Version.Build.ToString();
+        public string CurrentBuild => CurrentPackage.Id.Version.Build.ToString();
 
 
         /// <summary>
