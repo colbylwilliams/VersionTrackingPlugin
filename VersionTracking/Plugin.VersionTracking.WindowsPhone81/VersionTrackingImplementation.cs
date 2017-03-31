@@ -73,9 +73,9 @@ namespace Plugin.VersionTracking
 
                 var oldBuildList = AppSettings[xamBuildsKey] as List<string>;
 #else
-                var oldVersionList = AppSettings.Values[xamVersionsKey] as List<string>;
+                var oldVersionList = deserializeStringToList(AppSettings.Values[xamVersionsKey] as string);
 
-                var oldBuildList = AppSettings.Values[xamBuildsKey] as List<string>;
+                var oldBuildList = deserializeStringToList(AppSettings.Values[xamBuildsKey] as string);
 #endif
 
                 versionTrail = new Dictionary<string, List<string>> {
@@ -143,8 +143,8 @@ namespace Plugin.VersionTracking
                         AppSettings.CreateContainer(xamBuildsKey, ApplicationDataCreateDisposition.Always);
                     }
 
-                    AppSettings.Values[xamVersionsKey] = versionTrail[xamVersionsKey];
-                    AppSettings.Values[xamBuildsKey] = versionTrail[xamBuildsKey];
+                    AppSettings.Values[xamVersionsKey] = serializeList(versionTrail[xamVersionsKey].ToList());
+                    AppSettings.Values[xamBuildsKey] = serializeList(versionTrail[xamBuildsKey].ToList());
 #endif
                 }
             }
@@ -297,6 +297,15 @@ namespace Plugin.VersionTracking
             if (FirstLaunchForBuild(build)) block?.Invoke();
         }
 
+        private string serializeList(List<string> list)
+        {
+            return string.Join(",", list.ToArray());
+        }
+
+        private List<string> deserializeStringToList(string listAsString)
+        {
+            return listAsString.Split(',').ToList();
+        }
 
         public override string ToString()
         {
