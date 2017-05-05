@@ -16,6 +16,7 @@
 		<summary>App Version Tracking Plugin for Xamarin and Windows</summary>
 		<tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios, mac, version</tags>
 		<dependencies>
+      <dependency id="Newtonsoft.Json" version="[9.0.1]" />
 		</dependencies>
 	</metadata>
 	<files>
