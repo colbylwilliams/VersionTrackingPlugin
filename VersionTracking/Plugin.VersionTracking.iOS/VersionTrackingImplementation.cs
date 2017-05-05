@@ -254,6 +254,10 @@ namespace Plugin.VersionTracking
         }
 
 
+        /// <summary>
+        /// Return all values into a string
+        /// </summary>
+        /// <returns>All values</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
