@@ -3,7 +3,7 @@
 	<metadata minClientVersion="2.8.3">
 		<id>Plugin.VersionTracking</id>
 		<version>1.0.2</version>
-		<title>VersionTracking Plugin for Xamarin and Windows</title>
+		<title>VersionTracking Plugin for Xamarin and Windows UWP</title>
 		<authors>Colby Williams</authors>
 		<owners>Colby Williams</owners>
 		<licenseUrl>https://github.com/colbylwilliams/VersionTrackingPlugin/blob/master/LICENSE.md</licenseUrl>
@@ -14,7 +14,7 @@
          Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.
 		</description>
 		<summary>App Version Tracking Plugin for Xamarin and Windows</summary>
-		<tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios, mac, version</tags>
+		<tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, uwp, android, xamarin.forms, ios, mac, version</tags>
 		<dependencies>
       <dependency id="Newtonsoft.Json" version="[9.0.1]" />
 		</dependencies>

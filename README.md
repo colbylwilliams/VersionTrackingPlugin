@@ -1,6 +1,6 @@
 ## Version Tracking Plugin for Xamarin and Windows ![NuGet](https://img.shields.io/nuget/v/Plugin.VersionTracking.svg?label=NuGet)
 
-Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.  
+Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows UWP app a user has previously installed.  
 
 ## Setup
 * Available on NuGet: https://www.nuget.org/packages/Plugin.VersionTracking/1.0.1
@@ -15,9 +15,6 @@ _(fuctionality is exposed through a built-in Singleton, no dependency service re
 |Xamarin.iOS|Yes|iOS 7+|
 |Xamarin.iOS Unified|Yes|iOS 7+|
 |Xamarin.Android|Yes|API 10+|
-|Windows Phone Silverlight|Yes|8.0+|
-|Windows Phone RT|Yes|8.1+|
-|Windows Store RT|Yse|8.1+|
 |Windows 10 UWP|Yes|10+|
 |Xamarin.Mac|Yes||
 
@@ -26,7 +23,7 @@ _(fuctionality is exposed through a built-in Singleton, no dependency service re
 
 ## API Usage
 
-Call this on each app launch inside `DidFinishLaunching` (Xamarin.iOS), `FinishedLaunching` (Xamarin.Mac), or the MainActivity's `OnCreate` (Xamarin.Android)
+Call this on each app launch inside `DidFinishLaunching` (Xamarin.iOS), `FinishedLaunching` (Xamarin.Mac), the MainActivity's `OnCreate` (Xamarin.Android) or MainPage.cs's Constructor (Xamarin.Forms UWP)
 
 ```C#
 CrossVersionTracking.Current.Track ();
