@@ -2,18 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata minClientVersion="2.8.3">
 		<id>Plugin.VersionTracking</id>
-		<version>1.0.2</version>
+		<version>2.0.0</version>
 		<title>VersionTracking Plugin for Xamarin and Windows UWP</title>
-		<authors>Colby Williams</authors>
+		<authors>Colby Williams, Emanuele Filardo</authors>
 		<owners>Colby Williams</owners>
 		<licenseUrl>https://github.com/colbylwilliams/VersionTrackingPlugin/blob/master/LICENSE.md</licenseUrl>
 		<projectUrl>https://github.com/colbylwilliams/VersionTrackingPlugin</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/jamesmontemagno/Xamarin-Templates/master/Plugins-Templates/icons/plugin_icon_nuget.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-         Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.
+         Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows UWP app a user has previously installed.
 		</description>
-		<summary>App Version Tracking Plugin for Xamarin and Windows</summary>
+		<summary>App Version Tracking Plugin for Xamarin and Windows UWP</summary>
 		<tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, uwp, android, xamarin.forms, ios, mac, version</tags>
 		<dependencies>
       <dependency id="Newtonsoft.Json" version="[9.0.1]" />
