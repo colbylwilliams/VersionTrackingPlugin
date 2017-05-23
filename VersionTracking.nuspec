@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata minClientVersion="2.8.3">
-		<id>Plugin.VersionTracking</id>
-		<version>1.0.1</version>
-		<title>VersionTracking Plugin for Xamarin and Windows</title>
-		<authors>Colby Williams</authors>
+		<id>Xam.Plugin.VersionTracking</id>
+		<version>2.0.0</version>
+		<title>VersionTracking Plugin for Xamarin and Windows UWP</title>
+		<authors>Emanuele Filardo based on Colby Williams Code</authors>
 		<owners>Colby Williams</owners>
-		<licenseUrl>https://github.com/colbylwilliams/VersionTrackingPlugin/blob/master/LICENSE.md</licenseUrl>
-		<projectUrl>https://github.com/colbylwilliams/VersionTrackingPlugin</projectUrl>
+		<licenseUrl>https://github.com/fileman/VersionTrackingPlugin/blob/master/LICENSE.md</licenseUrl>
+		<projectUrl>https://github.com/fileman/VersionTrackingPlugin</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/jamesmontemagno/Xamarin-Templates/master/Plugins-Templates/icons/plugin_icon_nuget.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-         Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.
+         Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows UWP app a user has previously installed.
 		</description>
-		<summary>App Version Tracking Plugin for Xamarin and Windows</summary>
-		<tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios, mac, version</tags>
+		<summary>App Version Tracking Plugin for Xamarin and Windows UWP</summary>
+		<tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, uwp, android, xamarin.forms, ios, mac, version</tags>
 		<dependencies>
+      <dependency id="Newtonsoft.Json" version="[9.0.1]" />
 		</dependencies>
 	</metadata>
 	<files>
@@ -34,30 +35,6 @@
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.dll" target="lib\dotnet\Plugin.VersionTracking.Abstractions.dll" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.xml" target="lib\dotnet\Plugin.VersionTracking.Abstractions.xml" />
 		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.pdb" target="lib\dotnet\Plugin.VersionTracking.Abstractions.pdb" />
-
-		<!--Win Phone Silverlight-->
-		<file src="VersionTracking\Plugin.VersionTracking.WindowsPhone8\bin\Release\Plugin.VersionTracking.dll" target="lib\wp8\Plugin.VersionTracking.dll" />
-		<file src="VersionTracking\Plugin.VersionTracking.WindowsPhone8\bin\Release\Plugin.VersionTracking.xml" target="lib\wp8\Plugin.VersionTracking.xml" />
-		<file src="VersionTracking\Plugin.VersionTracking.WindowsPhone8\bin\Release\Plugin.VersionTracking.pdb" target="lib\wp8\Plugin.VersionTracking.pdb" />
-		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.dll" target="lib\wp8\Plugin.VersionTracking.Abstractions.dll" />
-		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.xml" target="lib\wp8\Plugin.VersionTracking.Abstractions.xml" />
-		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.pdb" target="lib\wp8\Plugin.VersionTracking.Abstractions.pdb" />
-
-		<!--Win Phone 81-->
-		<file src="VersionTracking\Plugin.VersionTracking.WindowsPhone81\bin\Release\Plugin.VersionTracking.dll" target="lib\wpa81\Plugin.VersionTracking.dll" />
-		<file src="VersionTracking\Plugin.VersionTracking.WindowsPhone81\bin\Release\Plugin.VersionTracking.xml" target="lib\wpa81\Plugin.VersionTracking.xml" />
-		<file src="VersionTracking\Plugin.VersionTracking.WindowsPhone81\bin\Release\Plugin.VersionTracking.pdb" target="lib\wpa81\Plugin.VersionTracking.pdb" />
-		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.dll" target="lib\wpa81\Plugin.VersionTracking.Abstractions.dll" />
-		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.xml" target="lib\wpa81\Plugin.VersionTracking.Abstractions.xml" />
-		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.pdb" target="lib\wpa81\Plugin.VersionTracking.Abstractions.pdb" />
-
-		<!--WinStore-->
-		<file src="VersionTracking\Plugin.VersionTracking.WindowsStore\bin\Release\Plugin.VersionTracking.dll" target="lib\win8\Plugin.VersionTracking.dll" />
-		<file src="VersionTracking\Plugin.VersionTracking.WindowsStore\bin\Release\Plugin.VersionTracking.xml" target="lib\win8\Plugin.VersionTracking.xml" />
-		<file src="VersionTracking\Plugin.VersionTracking.WindowsStore\bin\Release\Plugin.VersionTracking.pdb" target="lib\win8\Plugin.VersionTracking.pdb" />
-		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.dll" target="lib\win8\Plugin.VersionTracking.Abstractions.dll" />
-		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.xml" target="lib\win8\Plugin.VersionTracking.Abstractions.xml" />
-		<file src="VersionTracking\Plugin.VersionTracking.Abstractions\bin\Release\Plugin.VersionTracking.Abstractions.pdb" target="lib\win8\Plugin.VersionTracking.Abstractions.pdb" />
 
 		<!--Xamarin.Android-->
 		<file src="VersionTracking\Plugin.VersionTracking.Android\bin\Release\Plugin.VersionTracking.dll" target="lib\MonoAndroid10\Plugin.VersionTracking.dll" />
