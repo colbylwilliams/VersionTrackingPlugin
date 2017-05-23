@@ -6,8 +6,8 @@
 		<title>VersionTracking Plugin for Xamarin and Windows UWP</title>
 		<authors>Colby Williams, Emanuele Filardo</authors>
 		<owners>Colby Williams</owners>
-		<licenseUrl>https://github.com/colbylwilliams/VersionTrackingPlugin/blob/master/LICENSE.md</licenseUrl>
-		<projectUrl>https://github.com/colbylwilliams/VersionTrackingPlugin</projectUrl>
+		<licenseUrl>https://github.com/fileman/VersionTrackingPlugin/blob/master/LICENSE.md</licenseUrl>
+		<projectUrl>https://github.com/fileman/VersionTrackingPlugin</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/jamesmontemagno/Xamarin-Templates/master/Plugins-Templates/icons/plugin_icon_nuget.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
