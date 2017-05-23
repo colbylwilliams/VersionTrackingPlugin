@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata minClientVersion="2.8.3">
-		<id>Plugin.VersionTracking</id>
+		<id>Xam.Plugin.VersionTracking</id>
 		<version>2.0.0</version>
 		<title>VersionTracking Plugin for Xamarin and Windows UWP</title>
-		<authors>Colby Williams, Emanuele Filardo</authors>
+		<authors>Emanuele Filardo based on Colby Williams Code</authors>
 		<owners>Colby Williams</owners>
 		<licenseUrl>https://github.com/fileman/VersionTrackingPlugin/blob/master/LICENSE.md</licenseUrl>
 		<projectUrl>https://github.com/fileman/VersionTrackingPlugin</projectUrl>
