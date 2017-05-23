@@ -1,9 +1,9 @@
-## Version Tracking Plugin for Xamarin and Windows ![NuGet](https://img.shields.io/nuget/v/Plugin.VersionTracking.svg?label=NuGet)
+## Version Tracking Plugin for Xamarin and Windows ![NuGet](https://img.shields.io/nuget/v/Xam.Plugin.VersionTracking.svg?label=NuGet)
 
 Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows UWP app a user has previously installed.  
 
 ## Setup
-* Available on NuGet: https://www.nuget.org/packages/Plugin.VersionTracking/1.0.1
+* Available on NuGet: https://www.nuget.org/packages/Xam.Plugin.VersionTracking/
 * Install into your PCL project and Client projects.  
 _(fuctionality is exposed through a built-in Singleton, no dependency service required)_
 
@@ -60,7 +60,7 @@ vt.OnFirstLaunchOfVersion ("1.0.11", () => Console.WriteLine ("First time Versio
 
 
 ## Contributors
-* [Colby Williams](https://github.com/colbylwilliams)
+* Fork of [Colby Williams](https://github.com/colbylwilliams)
 * _Originally inspired by [GBVersionTracking](https://github.com/lmirosevic/GBVersionTracking)_
 
 
