@@ -258,7 +258,10 @@ namespace Plugin.VersionTracking
             if (FirstLaunchForBuild(build)) block?.Invoke();
         }
 
-
+        /// <summary>
+        /// Output to string
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
