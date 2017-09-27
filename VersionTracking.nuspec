@@ -8,7 +8,7 @@
 		<owners>Colby Williams, James Montemagno</owners>
 		<licenseUrl>https://github.com/colbylwilliams/VersionTrackingPlugin/blob/master/LICENSE.md</licenseUrl>
 		<projectUrl>https://github.com/colbylwilliams/VersionTrackingPlugin</projectUrl>
-		<iconUrl>https://raw.githubusercontent.com/jamesmontemagno/Xamarin-Templates/master/Plugins-Templates/icons/plugin_icon_nuget.png</iconUrl>
+		<iconUrl>https://raw.githubusercontent.com/colbylwilliams/VersionTrackingPlugin/master/plugin_icon.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
          Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.

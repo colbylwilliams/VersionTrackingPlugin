@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26923.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.VersionTracking", "VersionTracking\Plugin.VersionTracking\Plugin.VersionTracking.csproj", "{A6FCEF44-D2BA-42C7-B3CB-13667BCD7B54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.VersionTracking", "VersionTracking\Plugin.VersionTracking\Plugin.VersionTracking.csproj", "{A6FCEF44-D2BA-42C7-B3CB-13667BCD7B54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.VersionTracking.Abstractions", "VersionTracking\Plugin.VersionTracking.Abstractions\Plugin.VersionTracking.Abstractions.csproj", "{6EDB0588-FFC5-4EF5-8A99-9E241D0F878D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.VersionTracking.Abstractions", "VersionTracking\Plugin.VersionTracking.Abstractions\Plugin.VersionTracking.Abstractions.csproj", "{6EDB0588-FFC5-4EF5-8A99-9E241D0F878D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.VersionTracking.iOS", "VersionTracking\Plugin.VersionTracking.iOS\Plugin.VersionTracking.iOS.csproj", "{2882AEEB-D4CD-4EB9-8A6C-6653B33681F0}"
 EndProject
@@ -17,6 +17,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin.VersionTracking.macO
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{190E3A3D-733C-420D-A983-F1EE21FADE77}"
 	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		build.cake = build.cake
+		build.ps1 = build.ps1
+		cake.packages.config = cake.packages.config
+		LICENSE.md = LICENSE.md
+		README.md = README.md
 		VersionTracking.nuspec = VersionTracking.nuspec
 	EndProjectSection
 EndProject
@@ -131,5 +137,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98B507DE-83FB-4E9E-A638-F0A8909D3868}
 	EndGlobalSection
 EndGlobal
