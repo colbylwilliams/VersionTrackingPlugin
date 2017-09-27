@@ -73,9 +73,9 @@ namespace Plugin.VersionTracking
 
                 var oldBuildList = AppSettings[xamBuildsKey] as List<string>;
 #else
-                var oldVersionList = AppSettings.Values[xamVersionsKey] as List<string>;
+                var oldVersionList = deserializeStringToList(AppSettings.Values[xamVersionsKey] as string);
 
-                var oldBuildList = AppSettings.Values[xamBuildsKey] as List<string>;
+                var oldBuildList = deserializeStringToList(AppSettings.Values[xamBuildsKey] as string);
 #endif
 
                 versionTrail = new Dictionary<string, List<string>> {
@@ -143,8 +143,8 @@ namespace Plugin.VersionTracking
                         AppSettings.CreateContainer(xamBuildsKey, ApplicationDataCreateDisposition.Always);
                     }
 
-                    AppSettings.Values[xamVersionsKey] = versionTrail[xamVersionsKey];
-                    AppSettings.Values[xamBuildsKey] = versionTrail[xamBuildsKey];
+                    AppSettings.Values[xamVersionsKey] = serializeList(versionTrail[xamVersionsKey].ToList());
+                    AppSettings.Values[xamBuildsKey] = serializeList(versionTrail[xamBuildsKey].ToList());
 #endif
                 }
             }
@@ -172,13 +172,26 @@ namespace Plugin.VersionTracking
         public bool IsFirstLaunchForBuild => isFirstLaunchForBuild;
 
 
+        private Package CurrentPackage
+        {
+            get
+            {
+#if SILVERLIGHT
+                return Windows.Phone.Management.Deployment.InstallationManager.FindPackagesForCurrentPublisher().First();
+#else
+                return Package.Current;
+#endif
+            }
+        }
+
+
         /// <summary>
         /// Returns the current version of the app, as defined in the PList, e.g. "4.3".
         /// </summary>
         /// <value>The current version.</value>
         public string CurrentVersion {
             get {
-                var version = Package.Current.Id.Version;
+                var version = CurrentPackage.Id.Version;
 
                 return string.Format("{0}.{1}.{2}.{3}", version.Major, version.Minor, version.Build, version.Revision);
             }
@@ -189,7 +202,7 @@ namespace Plugin.VersionTracking
         /// Returns the current build of the app, as defined in the PList, e.g. "4300".
         /// </summary>
         /// <value>The current build.</value>
-        public string CurrentBuild => Package.Current.Id.Version.Build.ToString();
+        public string CurrentBuild => CurrentPackage.Id.Version.Build.ToString();
 
 
         /// <summary>
@@ -297,6 +310,15 @@ namespace Plugin.VersionTracking
             if (FirstLaunchForBuild(build)) block?.Invoke();
         }
 
+        private string serializeList(List<string> list)
+        {
+            return string.Join(",", list.ToArray());
+        }
+
+        private List<string> deserializeStringToList(string listAsString)
+        {
+            return listAsString.Split(',').ToList();
+        }
 
         public override string ToString()
         {
