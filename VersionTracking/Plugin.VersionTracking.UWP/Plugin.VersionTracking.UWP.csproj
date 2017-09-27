@@ -109,13 +109,11 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Plugin.VersionTracking.WindowsPhone81\VersionTrackingImplementation.cs">
-      <Link>VersionTrackingImplementation.cs</Link>
-    </Compile>
     <Compile Include="..\Plugin.VersionTracking\CrossVersionTracking.cs">
       <Link>CrossVersionTracking.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VersionTrackingImplementation.cs" />
     <EmbeddedResource Include="Properties\Plugin.VersionTracking.UWP.rd.xml" />
   </ItemGroup>
   <ItemGroup>
