@@ -114,7 +114,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VersionTrackingImplementation.cs" />
-    <EmbeddedResource Include="Properties\Plugin.VersionTracking.UWP.rd.xml" />
+    <EmbeddedResource Include="Properties\Plugin.VersionTracking.rd.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Plugin.VersionTracking.Abstractions\Plugin.VersionTracking.Abstractions.csproj">
