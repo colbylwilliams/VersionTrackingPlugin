@@ -3,23 +3,19 @@
 Track which versions of your Xamarin.iOS, Xamarin.Mac, Xamarin.Android, or Windows app a user has previously installed.  
 
 ## Setup
-* Available on NuGet: https://www.nuget.org/packages/Plugin.VersionTracking/1.0.1
-* Install into your PCL project and Client projects.  
+* Available on NuGet: https://www.nuget.org/packages/Plugin.VersionTracking/
+* Install into your PCL/.NET Standard project and Client projects.  
 _(fuctionality is exposed through a built-in Singleton, no dependency service required)_
 
 
 ##### Platform Support
 
-|Platform|Supported|Version|
-| ------------------- | :-----------: | :------------------: |
-|Xamarin.iOS|Yes|iOS 7+|
-|Xamarin.iOS Unified|Yes|iOS 7+|
-|Xamarin.Android|Yes|API 10+|
-|Windows Phone Silverlight|Yes|8.0+|
-|Windows Phone RT|Yes|8.1+|
-|Windows Store RT|Yse|8.1+|
-|Windows 10 UWP|Yes|10+|
-|Xamarin.Mac|Yes||
+|Platform|Version|
+| ------------------- | :------------------: |
+|Xamarin.iOS|iOS 7+|
+|Xamarin.Android|API 10+|
+|Windows 10 UWP|10+|
+|Xamarin.Mac|All|
 
 **_Supports both classic Xamarin.iOS / Xamarin.Android and Xamarin.Forms_**
 
@@ -69,4 +65,4 @@ vt.OnFirstLaunchOfVersion ("1.0.11", () => Console.WriteLine ("First time Versio
 
 #### License
 The MIT License (MIT)
-Copyright © 2016 Colby Williams
+Copyright © 2017 Colby Williams

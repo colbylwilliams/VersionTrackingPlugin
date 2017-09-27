@@ -7,6 +7,8 @@
 *.sln.docstates
 *.userprefs
 
+.vs/
+
 # Xamarin.Android
 Resource.designer.cs
 Resources.designer.cs

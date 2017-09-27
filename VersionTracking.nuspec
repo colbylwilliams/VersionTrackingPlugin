@@ -4,8 +4,8 @@
 		<id>Plugin.VersionTracking</id>
 		<version>$version</version>
 		<title>VersionTracking Plugin for Xamarin and Windows</title>
-		<authors>Colby Williams</authors>
-		<owners>Colby Williams</owners>
+		<authors>Colby Williams, James Montemagno</authors>
+		<owners>Colby Williams, James Montemagno</owners>
 		<licenseUrl>https://github.com/colbylwilliams/VersionTrackingPlugin/blob/master/LICENSE.md</licenseUrl>
 		<projectUrl>https://github.com/colbylwilliams/VersionTrackingPlugin</projectUrl>
 		<iconUrl>https://raw.githubusercontent.com/jamesmontemagno/Xamarin-Templates/master/Plugins-Templates/icons/plugin_icon_nuget.png</iconUrl>

@@ -6,12 +6,8 @@ using System.Collections.Generic;
 using System.Text;
 
 using Windows.ApplicationModel;
-
-#if SILVERLIGHT
-using System.IO.IsolatedStorage;
-#else
 using Windows.Storage;
-#endif
+
 
 namespace Plugin.VersionTracking
 {
@@ -20,15 +16,10 @@ namespace Plugin.VersionTracking
     /// </summary>
     public class VersionTrackingImplementation : IVersionTracking
     {
-#if SILVERLIGHT
-        private static IsolatedStorageSettings AppSettings {
-            get { return IsolatedStorageSettings.ApplicationSettings; }
-        }
-#else
+        
         private static ApplicationDataContainer AppSettings {
             get { return ApplicationData.Current.LocalSettings; }
         }
-#endif
 
         private readonly object locker = new object();
 
@@ -51,11 +42,8 @@ namespace Plugin.VersionTracking
             var needsSync = false;
 
             // load history
-#if SILVERLIGHT
-            var noValues = (!AppSettings.Contains(xamVersionsKey) || !AppSettings.Contains(xamBuildsKey));
-#else
+
             var noValues = (!AppSettings.Values.ContainsKey(xamVersionsKey) || !AppSettings.Values.ContainsKey(xamBuildsKey));
-#endif
 
             if (noValues) {
 
@@ -68,15 +56,10 @@ namespace Plugin.VersionTracking
 
             } else {
 
-#if SILVERLIGHT
-                var oldVersionList = AppSettings[xamVersionsKey] as List<string>;
 
-                var oldBuildList = AppSettings[xamBuildsKey] as List<string>;
-#else
                 var oldVersionList = AppSettings.Values[xamVersionsKey] as List<string>;
 
                 var oldBuildList = AppSettings.Values[xamBuildsKey] as List<string>;
-#endif
 
                 versionTrail = new Dictionary<string, List<string>> {
                         { xamVersionsKey, oldVersionList },
@@ -121,21 +104,7 @@ namespace Plugin.VersionTracking
             if (needsSync) {
 
                 lock (locker) {
-#if SILVERLIGHT
-                    if (!AppSettings.Contains(xamVersionsKey)) {
-                        AppSettings.Add(xamVersionsKey, versionTrail[xamVersionsKey]);
-                    } else {
-                        AppSettings[xamVersionsKey] = versionTrail[xamVersionsKey];
-                    }
 
-                    if (!AppSettings.Contains(xamBuildsKey)) {
-                        AppSettings.Add(xamBuildsKey, versionTrail[xamBuildsKey]);
-                    } else {
-                        AppSettings[xamBuildsKey] = versionTrail[xamBuildsKey];
-                    }
-
-                    AppSettings.Save();
-#else
                     if (!AppSettings.Values.ContainsKey(xamVersionsKey)) {
                         AppSettings.CreateContainer(xamVersionsKey, ApplicationDataCreateDisposition.Always);
                     }
@@ -145,7 +114,6 @@ namespace Plugin.VersionTracking
 
                     AppSettings.Values[xamVersionsKey] = versionTrail[xamVersionsKey];
                     AppSettings.Values[xamBuildsKey] = versionTrail[xamBuildsKey];
-#endif
                 }
             }
         }
