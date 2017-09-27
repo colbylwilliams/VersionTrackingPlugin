@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata minClientVersion="2.8.3">
 		<id>Plugin.VersionTracking</id>
-		<version>2.0.0</version>
+		<version>$version</version>
 		<title>VersionTracking Plugin for Xamarin and Windows</title>
 		<authors>Colby Williams</authors>
 		<owners>Colby Williams</owners>
@@ -31,8 +31,7 @@
 		<!--uap-->
 		<file src="VersionTracking\Plugin.VersionTracking.UWP\bin\Release\Plugin.VersionTracking.*" target="lib\UAP10\" />
 
-		<!--Xamarin.Mac
+		<!--Xamarin.Mac-->
 		<file src="VersionTracking\Plugin.VersionTracking.Mac\bin\Release\Plugin.VersionTracking.*" target="lib\Xamarin.Mac20\" />
-        -->
 	</files>
 </package>
