@@ -57,9 +57,9 @@ namespace Plugin.VersionTracking
             } else {
 
 
-                var oldVersionList = AppSettings.Values[xamVersionsKey] as List<string>;
+                var oldVersionList = (AppSettings.Values[xamVersionsKey] as string)?.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries).ToList() ?? new List<string>();
 
-                var oldBuildList = AppSettings.Values[xamBuildsKey] as List<string>;
+                var oldBuildList = (AppSettings.Values[xamBuildsKey] as string)?.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries).ToList() ?? new List<string>();
 
                 versionTrail = new Dictionary<string, List<string>> {
                         { xamVersionsKey, oldVersionList },
@@ -112,8 +112,8 @@ namespace Plugin.VersionTracking
                         AppSettings.CreateContainer(xamBuildsKey, ApplicationDataCreateDisposition.Always);
                     }
 
-                    AppSettings.Values[xamVersionsKey] = versionTrail[xamVersionsKey];
-                    AppSettings.Values[xamBuildsKey] = versionTrail[xamBuildsKey];
+                    AppSettings.Values[xamVersionsKey] = String.Join("|", versionTrail[xamVersionsKey]);
+                    AppSettings.Values[xamBuildsKey] = String.Join("|", versionTrail[xamBuildsKey]);
                 }
             }
         }
